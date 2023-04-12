@@ -1,3 +1,4 @@
+# Pragmas
 @app
 notes
 
@@ -23,6 +24,9 @@ architect/plugin-lambda-invoker
 # web socket functions
 # @ws
 
+# @static
+# spa true
+
 # Http routes
 @http
 
@@ -40,7 +44,8 @@ post /likes
 # Run AWS Simple Notification System (sns) Others apps can listen through event bus
 @events
 notification
-slack
+create-and-send-pdf
+# slack
 
 # Run AWS Simple Queue System (sqs)
 @queues

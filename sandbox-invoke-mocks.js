@@ -8,6 +8,12 @@ module.exports = {
         likes: 11,
       },
     },
+    "create-and-send-pdf": {
+      event: {
+        id: 123,
+        title: "pdf",
+      },
+    },
   },
   queues: {
     emails: {

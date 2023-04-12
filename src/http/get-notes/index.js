@@ -1,8 +1,10 @@
 const arc = require("@architect/functions");
-const layout = require("@architect/shared/layout");
+const layout = require("@architect/views/layout");
 const getNotes = require("./get-notes.js");
+const welcome = require("@architect/shared/welcome");
 
-exports.handler = arc.http.async(http);
+// Middleware and then http lambda (Require login etc)
+exports.handler = arc.http.async(welcome, http);
 
 // display all notes
 async function http(req) {

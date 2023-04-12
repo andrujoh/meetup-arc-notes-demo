@@ -1,5 +1,5 @@
 const arc = require("@architect/functions");
-const layout = require("@architect/shared/layout");
+const layout = require("@architect/views/layout");
 
 exports.handler = arc.http.async(showNote);
 
