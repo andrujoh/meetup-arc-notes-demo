@@ -1,24 +1,32 @@
 @app
 notes
 
-@create
-autocreate true
-
 @sandbox
 livereload true
 
+# AWS specific configuration
 @aws
 profile personal
 region eu-west-2
 architecture arm64
-
-@shared
-src src/shared
+# runtime typescript
+# runtime nodejs16.x
 
 @plugins
 architect/plugin-lambda-invoker
+# architect/plugin-typescript
 
+# configure path to shared source code (Has default path)
+# @shared
+# src src/shared
+
+# web socket functions
+# @ws
+
+# Http routes
 @http
+
+# get /helloworld
 get /
 get /notes
 
@@ -29,15 +37,27 @@ post /notes/:noteID/delete
 
 post /likes
 
+# Run AWS Simple Notification System (sns) Others apps can listen through event bus
 @events
 notification
+slack
 
+# Run AWS Simple Queue System (sqs)
 @queues
 emails
+# send-websocket
 
+# Run cron jobs
 @scheduled
 lower-likes rate(7 hours)
 
+# Persist data in dynamodb
 @tables
 notes
   noteID *String
+	
+# Table global secondary indexes (Dynamodb)
+# @tables-indexes
+# notes
+#   GSI1PK *String
+#   GSI1SK **String
