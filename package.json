@@ -8,7 +8,7 @@
     "deploy": "arc deploy"
   },
   "devDependencies": {
-    "@architect/architect": "^10.11.0",
+    "@architect/architect": "^10.12.3",
     "@architect/plugin-lambda-invoker": "^1.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^5.6.3",
