@@ -15,7 +15,7 @@
     "tiny-json-http": "^7.5.1"
   },
   "dependencies": {
-    "@architect/functions": "^5.4.0",
+    "@architect/functions": "^6.0.0",
     "hashids": "^2.2.11",
     "sanitize-html": "^2.10.0"
   }
