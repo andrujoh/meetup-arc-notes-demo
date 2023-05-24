@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@architect/functions": "^5.4.0",
-    "hashids": "^2.2.11",
+    "hashids": "^2.3.0",
     "sanitize-html": "^2.10.0"
   }
 }
